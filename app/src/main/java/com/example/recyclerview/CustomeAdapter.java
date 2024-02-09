@@ -39,11 +39,7 @@ public class CustomeAdapter extends RecyclerView.Adapter<CustomeAdapter.MyViewHo
             itemSection = itemView.findViewById(R.id.item_section);
             arrowImage = itemView.findViewById(R.id.arrow_image);
 
-            // Set click listeners
             itemSection.setOnClickListener(this);
-//            cardLayout.setOnClickListener(this);
-//            textViewExtendedDes.setOnClickListener(this);
-//            arrowImage.setOnClickListener(this);
         }
 
         @Override

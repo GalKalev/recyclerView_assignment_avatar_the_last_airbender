@@ -7,8 +7,6 @@ public class DataModel {
     private int image;
     private int bg;
 
-    private boolean expand; //added
-
     public DataModel(String name, String version, int id_, int image, int bg) {
         this.name = name;
         this.version = version;

@@ -45,21 +45,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
 
-
-
-
-
-//        recyclerView.setOnTouchListener(new View.OnTouchListener() {
-//            public boolean onTouch(View v, MotionEvent event) {
-////                findViewById(R.id.scroll_view).getParent().requestDisallowInterceptTouchEvent(false);
-//                return false;
-//            }
-//        });
-
-
-
-
-
     }
 
 }
