@@ -5,20 +5,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   >
+    android:background="#FFFFFF">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/background2_banner"
             app:collapsedTitleTextAppearance="@style/CollapsedTitle"
-            app:expandedTitleTextAppearance="@style/ExpandedTitle"
             app:contentScrim="@color/white"
             app:expandedTitleMarginStart="64dp"
+            app:expandedTitleTextAppearance="@style/ExpandedTitle"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:title="AVATAR: THE LAST AIRBENDER">
 
@@ -26,9 +27,16 @@
             <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="parallax">
-            </androidx.appcompat.widget.Toolbar>
+                android:background="#000000"
+                android:visibility="visible"
+                app:layout_collapseMode="parallax"></androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#BABABA" />
 
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -39,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="7dp"
-        android:background="@android:color/transparent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        android:background="#FFFFFF"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

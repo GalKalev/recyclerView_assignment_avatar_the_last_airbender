@@ -6,6 +6,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
@@ -50,6 +52,7 @@ public class CustomeAdapter extends RecyclerView.Adapter<CustomeAdapter.MyViewHo
                 textViewExtendedDes.setVisibility(textViewExtendedDes.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE);
                 // Change arrowImage drawable based on textViewDes visibility
                 arrowImage.setImageResource(textViewDes.getVisibility() == View.VISIBLE ? R.drawable.arrow_down : R.drawable.arrow_up);
+                Toast.makeText(v.getContext(), "Pressed " + textViewName.getText().toString(), Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -80,5 +83,10 @@ public class CustomeAdapter extends RecyclerView.Adapter<CustomeAdapter.MyViewHo
     @Override
     public int getItemCount() {
         return dataSet.size();
+    }
+
+    public void filterList(ArrayList<DataModel> filterList){
+        dataSet = filterList;
+        notifyDataSetChanged();
     }
 }
